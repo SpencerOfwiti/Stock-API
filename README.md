@@ -34,7 +34,7 @@ It provides daily predictions on the stock price for the next day and an overvie
 * [Pytest](https://docs.pytest.org/en/latest/) - The testing framework used.
 
 ## Submodules
-* [Stock-ML](https://github.com/SpencerOfwiti/stock-ml) - Implementation of various machine learning algorithms in the prediction of Kenya's stock market performance. 
+* [StockML](https://github.com/SpencerOfwiti/StockML) - Implementation of various machine learning algorithms in the prediction of Kenya's stock market performance. 
 
 ## Code Example
 

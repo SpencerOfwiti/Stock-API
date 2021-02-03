@@ -27,4 +27,4 @@ else
 fi
 
 # install requirements
-pip install -r requirements.txt
+pip install -r requirements.txt StockML/requirements.txt
