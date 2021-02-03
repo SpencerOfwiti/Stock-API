@@ -4,3 +4,6 @@
 [submodule "StockML"]
 	path = StockML
 	url = git@github.com:SpencerOfwiti/StockML.git
+[submodule "Stock-API"]
+	path = Stock-API
+	url = https://github.com/SpencerOfwiti/Stock-API.git
