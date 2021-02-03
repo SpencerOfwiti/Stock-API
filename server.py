@@ -42,7 +42,7 @@ def get_request_method(env: dict) -> str:
     return env.get('REQUEST_METHOD').upper()
 
 
-def application(env:dict, start_response:any):
+def application(env: dict, start_response: any):
     """
     Loads python code for application to be accessible over web server.
     :param env: Query parameters from the request.
@@ -60,12 +60,20 @@ def application(env:dict, start_response:any):
         ('Access-Control-Allow-Origin', '*')
     ]
 
+    response = b'Hello World!'
+
     # validate request method
-    if not get_request_method(env) != 'GET':
+    if not get_request_method(env) == 'GET':
         start_response('405 Play by the rules', errors_headers)
         return []
 
-    data = 'StockML/data/predicted/lstm/Safaricom-Ltd(SCOM).csv'
-    pred = get_predictions(data)
+    if get_request_endpoint(env) == '/predictions':
+        data = 'StockML/data/predicted/lstm/Safaricom-Ltd(SCOM).csv'
+        predictions = get_predictions(data)
+        response = {'predictions': predictions}
+        response_bytes = str(response).encode('utf-8')
+        start_response('200 OK', [('Content-Type', 'application/json')])
+        return [response_bytes]
+
     start_response('200 OK', [('Content-Type', 'text/html')])
-    return [b'Hello World!']
+    return [response]
