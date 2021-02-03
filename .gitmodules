@@ -1,9 +1,3 @@
-[submodule "stock-ml"]
-	path = stock-ml
-	url = git@github.com:SpencerOfwiti/stock-ml.git
 [submodule "StockML"]
 	path = StockML
-	url = git@github.com:SpencerOfwiti/StockML.git
-[submodule "Stock-API"]
-	path = Stock-API
-	url = https://github.com/SpencerOfwiti/Stock-API.git
+	url = https://github.com/SpencerOfwiti/StockML.git
