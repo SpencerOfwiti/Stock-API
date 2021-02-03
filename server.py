@@ -1,4 +1,3 @@
-import sys
 from typing import Optional, Union
 from urllib.parse import urlparse, parse_qs
 from StockML.src.predictions import get_predictions
@@ -68,11 +67,15 @@ def application(env: dict, start_response: any):
         return []
 
     if get_request_endpoint(env) == '/predictions':
-        data = 'StockML/data/predicted/lstm/Safaricom-Ltd(SCOM).csv'
-        predictions = get_predictions(data)
-        response = {'predictions': predictions}
+        historical_data = 'StockML/data/interim/Safaricom-Ltd(SCOM).csv'
+        predictions_data = 'StockML/data/predicted/lstm/Safaricom-Ltd(SCOM).csv'
+        history, predictions = get_predictions(historical_data, predictions_data)
+        response = {
+            'history': history,
+            'predictions': predictions
+        }
         response_bytes = str(response).encode('utf-8')
-        start_response('200 OK', [('Content-Type', 'application/json')])
+        start_response('200 OK', headers)
         return [response_bytes]
 
     start_response('200 OK', [('Content-Type', 'text/html')])
