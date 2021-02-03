@@ -3,6 +3,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0) 
 ![GitHub repo size](https://img.shields.io/github/repo-size/SpencerOfwiti/Stock-API.svg)
 ![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
+[![contributors](https://img.shields.io/github/contributors/SpencerOfwiti/Stock-API.svg)](https://github.com/SpencerOfwiti/stock-ml/contributors)
 
 A python UWSGI server for availing stock predictions to external clients.  
 
@@ -35,6 +36,7 @@ It provides daily predictions on the stock price for the next day and an overvie
 
 ## Submodules
 * [StockML](https://github.com/SpencerOfwiti/StockML) - Implementation of various machine learning algorithms in the prediction of Kenya's stock market performance. 
+* [SentimentAnalysisStockML](https://github.com/Minjire/sentiment_analysis_stock_ml.git) - Implementation of various machine learning algorithms in the prediction of Kenya's stock market performance.
 
 ## Code Example
 
@@ -132,17 +134,20 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 
 ## Authors
 
-* **[Spencer Ofwiti](https://github.com/SpencerOfwiti)** - *Initial work* 
+* **[Spencer Ofwiti](https://github.com/SpencerOfwiti)**
     
 [![github follow](https://img.shields.io/github/followers/SpencerOfwiti?label=Follow_on_GitHub)](https://github.com/SpencerOfwiti)
 [![twitter follow](https://img.shields.io/twitter/follow/SpencerOfwiti?style=social)](https://twitter.com/SpencerOfwiti)
 
-See also the list of [contributors](https://github.com/SpencerOfwiti/Stock-API/contributors) who participated in this project.
+* **[Kelvin Minjire](https://github.com/Minjire)**
+  
+[![github follow](https://img.shields.io/github/followers/Minjire?label=Follow_on_GitHub)](https://github.com/Minjire)
+[![twitter follow](https://img.shields.io/twitter/follow/minjirekelvin?style=social)](https://twitter.com/minjirekelvin)
 
-[![contributors](https://img.shields.io/github/contributors/SpencerOfwiti/Stock-API.svg)](https://github.com/SpencerOfwiti/stock-ml/contributors)
+* **[Kevin Wachira](https://github.com/wachira-kevin)**
 
-* **[Kelvin Minjire](https://github.com/Minjire)** - *Contributor*
-* **[Kevin Wachira](https://github.com/wachira-kevin)** - *Contributor*
+[![github follow](https://img.shields.io/github/followers/wachira-kevin?label=Follow_on_GitHub)](https://github.com/wachira-kevin)
+
 
 ## License
 
