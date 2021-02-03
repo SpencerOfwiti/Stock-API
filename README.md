@@ -9,6 +9,7 @@ A python UWSGI server for availing stock predictions to external clients.
 ## Table of contents
 * [Motivation](#motivation)
 * [Built With](#built-with)
+* [Submodules](#submodules)
 * [Code Example](#code-example)
 * [Prerequisites](#prerequisites)
 * [Installation](#installation)
@@ -31,6 +32,9 @@ It provides daily predictions on the stock price for the next day and an overvie
 ## Built With
 * [Python 3.8](https://www.python.org/) - The programming language used.
 * [Pytest](https://docs.pytest.org/en/latest/) - The testing framework used.
+
+## Submodules
+* [Stock-ML](https://github.com/SpencerOfwiti/stock-ml) - Implementation of various machine learning algorithms in the prediction of Kenya's stock market performance. 
 
 ## Code Example
 
@@ -87,6 +91,11 @@ source setup.sh
 To run web server:
 ```
 uwsgi --http :9090 --wsgi-file server.py
+```
+
+To update submodules:
+```
+git submodule update --remote <submodule_name>
 ```
 
 ## Tests
