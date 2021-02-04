@@ -1,7 +1,7 @@
 from typing import Optional, Union
 from urllib.parse import urlparse, parse_qs
 from StockML.src.predictions import get_predictions
-from sentiment_analysis_stock_ml.src.sentiment.predictions import get_sentiment_predictions
+#from sentiment_analysis_stock_ml.src.sentiment.predictions import get_sentiment_predictions
 
 
 def get_query_parameters(env: dict, query_name: Optional[str] = None) -> Union[dict, str]:
@@ -70,13 +70,13 @@ def application(env: dict, start_response: any):
     if get_request_endpoint(env) == '/predictions':
         historical_data = 'StockML/data/interim/Safaricom-Ltd(SCOM).csv'
         predictions_data = 'StockML/data/predicted/lstm/Safaricom-Ltd(SCOM).csv'
-        sentiment_predictions_data = 'sentiment_analysis/data/predicted/safaricom_predictions.csv'
+        #sentiment_predictions_data = 'sentiment_analysis/data/predicted/safaricom_predictions.csv'
         history, predictions = get_predictions(historical_data, predictions_data)
-        sentiment_predictions = get_sentiment_predictions(sentiment_predictions_data)
+        #sentiment_predictions = get_sentiment_predictions(sentiment_predictions_data)
         response = {
             'history': history,
-            'predictions': predictions,
-            'sentiment_predictions': sentiment_predictions
+            'predictions': predictions
+            #'sentiment_predictions': sentiment_predictions
         }
         response_bytes = str(response).encode('utf-8')
         start_response('200 OK', headers)
