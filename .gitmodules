@@ -2,3 +2,6 @@
 	path = StockML
 	url = https://github.com/SpencerOfwiti/StockML.git
 
+[submodule "sentiment_analysis_stock_ml"]
+	path = sentiment_analysis_stock_ml
+	url = https://github.com/Minjire/sentiment_analysis_stock_ml.git
