@@ -5,7 +5,9 @@
 ![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 [![contributors](https://img.shields.io/github/contributors/SpencerOfwiti/Stock-API.svg)](https://github.com/SpencerOfwiti/stock-ml/contributors)
 
-A python UWSGI server for availing stock predictions to external clients.  
+A python UWSGI server for availing stock predictions to external clients. It contains two submodules that generate stock price predictions: StockMl - Predictions based on historical data, Sentiment Analysis - Prediction based on market confidence in publications.
+* [API address](http://45.63.97.7:9090): http://45.63.97.7:9090
+* [Predictions endpoint](http://45.63.97.7:9090/predictions): /predictions
 
 ## Table of contents
 * [Motivation](#motivation)
