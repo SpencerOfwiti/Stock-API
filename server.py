@@ -73,10 +73,19 @@ def application(env: dict, start_response: any):
         sentiment_predictions_data = 'sentiment_analysis_stock_ml/data/predicted/safaricom_predictions.csv'
         history, predictions = get_predictions(historical_data, predictions_data)
         sentiment_predictions = get_sentiment_predictions(sentiment_predictions_data)
+        sentiment = 'Neutral'
+        if len(sentiment_predictions) > 0:
+            ratio = max(sentiment_predictions)
+            if ratio is sentiment_predictions[0]:
+                sentiment = 'Negative'
+            elif ratio is sentiment_predictions[2]:
+                sentiment = 'Positive'
         response = {
+            'company': 'Safaricom',
             'history': history,
             'predictions': predictions,
-            'sentiment_predictions': sentiment_predictions
+            'sentiment_predictions': sentiment_predictions,
+            'sentiment': sentiment
         }
         response_bytes = str(response).encode('utf-8')
         start_response('200 OK', headers)
