@@ -1,3 +1,4 @@
+import json
 from typing import Optional, Union
 from urllib.parse import urlparse, parse_qs
 from StockML.src.predictions import get_predictions
@@ -81,12 +82,13 @@ def application(env: dict, start_response: any):
             elif ratio is sentiment_predictions[2]:
                 sentiment = 'Positive'
         response = {
-            'company': 'Safaricom',
-            'predictions': predictions,
-            'sentiment_predictions': sentiment_predictions,
-            'sentiment': sentiment,
-            'history': history
+            "company": 'Safaricom',
+            "predictions": predictions,
+            "sentiment_predictions": sentiment_predictions,
+            "sentiment": sentiment,
+            "history": history
         }
+        response = json.dumps(response)
         response_bytes = str(response).encode('utf-8')
         start_response('200 OK', headers)
         return [response_bytes]
