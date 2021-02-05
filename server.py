@@ -82,10 +82,10 @@ def application(env: dict, start_response: any):
                 sentiment = 'Positive'
         response = {
             'company': 'Safaricom',
-            'history': history,
             'predictions': predictions,
             'sentiment_predictions': sentiment_predictions,
-            'sentiment': sentiment
+            'sentiment': sentiment,
+            'history': history
         }
         response_bytes = str(response).encode('utf-8')
         start_response('200 OK', headers)
