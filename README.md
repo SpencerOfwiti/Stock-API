@@ -10,6 +10,7 @@ StockMl - Predictions based on historical data,
 Sentiment Analysis - Prediction based on market confidence in publications.
 * [API address](http://45.63.97.7:9090): http://45.63.97.7:9090
 * [Predictions endpoint](http://45.63.97.7:9090/predictions): /predictions
+* [Angular dashboard](http://45.63.97.7:5000): Angular dashboard showing predictions
 
 ## Table of contents
 * [Motivation](#motivation)
